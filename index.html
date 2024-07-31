@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Junction</title>
+    <link href="code.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>Welcome to Code Junction!</h1>
+    </div>
+    <div class="main">
+
+        <div class="menu">
+            <div class="cond-stat">
+                <button onclick="toggleContent('conStatement')" class="statement">
+                Control Statements in C
+                </button>
+                <div id="conStatement" class="stat-content">
+                    <a href="#if-stat" onClick="showProgram('if-stat')">if statement</a>
+                    <a href="#if-else" onClick="showProgram('if-else')">if-else Statement</a>
+                    <a href="#if-else-ladder" onClick="showProgram('if-else-ladder')">if-else ladder Statement</a>
+                    <a href="#nested-if-else" onClick="showProgram('nested-if-else')">Nested-if-else Statement</a>
+                </div>
+            </div>
+
+            <div class="loopC">
+                <button onclick="toggleContent('loopC')" class="loop">Loops in C</button>
+                <div id="loopC" class="loop-content">
+                    <a href="#for-loop" onClick="showProgram('for-loop')">for loop</a>
+                    <a href="#while-loop" onClick="showProgram('while-loop')">while loop</a>
+                    <a href="#do-while" onClick="showProgram('do-while')">do-while loop</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="program">
+            <div id="if-stat" class="program-code" style="display: none;">
+                <h5>Program to find the largest number of the three.</h5>
+                    <pre><code>
+                      #include <stdio.h>  
+                        int main()  
+                        {  
+                            int a, b, c;   
+                             printf("Enter three numbers?");  
+                            scanf("%d %d %d",&a,&b,&c);  
+                            if(a>b && a>c)  
+                            {  
+                                printf("%d is largest",a);  
+                            }  
+                            if(b>a  && b > c)  
+                            {  
+                                printf("%d is largest",b);  
+                            }  
+                            if(c>a && c>b)  
+                            {  
+                                printf("%d is largest",c);  
+                            }  
+                            if(a == b && a == c)   
+                            {  
+                                printf("All are equal");   
+                            }  
+                        }  
+                    </code></pre>
+                    <div class="output">
+                      <h5>Output:</h5>
+                      <pre><code>
+                        Enter three numbers?
+                        12 23 34
+                        34 is largest 
+                      </code></pre>
+                    </div>
+            </div>
+
+            <div id="if-else" class="program-code" style="display: none;">
+              <h5>Program to check whether a person is eligible to vote or not.</h5>
+                  <pre><code>
+                    #include <stdio.h>  
+                      int main()  
+                      {  
+                          int age;   
+                          printf("Enter your age?");   
+                          scanf("%d",&age);  
+                          if(age>=18)  
+                          {  
+                              printf("You are eligible to vote...");   
+                          }  
+                          else   
+                          {  
+                              printf("Sorry ... you can't vote");   
+                          }  
+                      }  
+                  </code></pre>
+                  <div class="output">
+                    <h5>Output:</h5>
+                    <pre><code>
+                      Enter your age?18
+                      You are eligible to vote...
+                      Enter your age?13
+                      Sorry ... you can't vote
+                    </code></pre>
+                  </div>
+            </div>
+
+            <div id="if-else-ladder" class="program-code" style="display: none;">
+              <h5>Program to calculate the grade of the student according to the specified marks.</h5>
+                  <pre><code>
+                    #include <stdio.h>  
+                      int main()  
+                      {  
+                          int marks;   
+                          printf("Enter your marks?");  
+                          scanf("%d",&marks);   
+                          if(marks > 85 && marks <= 100)  
+                          {  
+                              printf("Congrats ! you scored grade A ...");   
+                          }  
+                          else if (marks > 60 && marks <= 85)   
+                          {  
+                              printf("You scored grade B + ...");  
+                          }  
+                          else if (marks > 40 && marks <= 60)   
+                          {  
+                              printf("You scored grade B ...");  
+                          }  
+                          else if (marks > 30 && marks <= 40)   
+                          {  
+                              printf("You scored grade C ...");   
+                          }  
+                          else   
+                          {  
+                              printf("Sorry you are fail ...");   
+                          }  
+                      }  
+                  </code></pre>
+                  <div class="output">
+                    <h5>Output:</h5>
+                    <pre><code>
+                      Enter your marks?10
+                      Sorry you are fail ...  
+                      Enter your marks?40
+                      You scored grade C ...
+                      Enter your marks?90
+                      Congrats ! you scored grade A ...
+                    </code></pre>
+                  </div>
+            </div>
+
+            <div id="nested-if-else" class="program-code" style="display: none;">
+              <h5>write a program that takes in a number and checks whether it is positive, negative, or zero.</h5>
+                  <pre><code>
+                    #include <stdio.h>  
+  
+                      int main() {  
+                         int num;  
+                        
+                      printf("Enter a number: ");  
+                      scanf("%d", &num);  
+                        
+                         if (num > 0) {  
+                      printf("%d is positive.\n", num);  
+                         } else {  
+                            if (num < 0) {  
+                      printf("%d is negative.\n", num);  
+                            } else {  
+                      printf("%d is zero.\n", num);  
+                            }  
+                         }  
+                        
+                         return 0;  
+                      }  
+                  </code></pre>
+                <div class="output">
+                  <h5>Output:</h5>
+                  <pre><code>
+                    Enter a number: 10
+                    10 is positive.
+
+                    Enter a number: -5
+                    -5 is negative.
+
+                    Enter a number: 0
+                    0 is zero.
+
+                  </code></pre>
+                </div>
+            </div>
+
+          <div id="for-loop" class="program-code" style="display: none;">
+            <h5> Program to calculate the sum of first n natural numbers
+              </h5>
+                <pre><code>
+                  #include <stdio.h>
+                    int main()
+                    {
+                        int num, count, sum = 0;
+                    
+                        printf("Enter a positive integer: ");
+                        scanf("%d", &num);
+                    
+                        // for loop terminates when num is less than count
+                        for(count = 1; count <= num; ++count)
+                        {
+                            sum += count;
+                        }
+                    
+                        printf("Sum = %d", sum);
+                    
+                        return 0;
+                    }
+                </code></pre>
+                <div class="output">
+                  <h5>Output:</h5>
+                  <pre><code>
+                    Enter a positive integer: 10
+                    Sum = 55
+                  </code></pre>
+                </div>
+          </div>
+
+
+          <div id="while-loop" class="program-code" style="display: none;">
+            <h5> Program to print table for the given number using while loop in C</h5>
+                <pre><code>
+                  #include<stdio.h>  
+                    int main(){    
+                    int i=1,number=0,b=9;    
+                    printf("Enter a number: ");    
+                    scanf("%d",&number);    
+                    while(i<=10){    
+                    printf("%d \n",(number*i));    
+                    i++;    
+                    }    
+                    return 0;  
+                    }   
+                </code></pre>
+                <div class="output">
+                  <h5>Output:</h5>
+                  <pre><code>
+                    Enter a number: 50
+                    50
+                    100
+                    150
+                    200
+                    250
+                    300
+                    350
+                    400
+                    450
+                    500
+                  </code></pre>
+                </div>
+          </div>
+
+          <div id="do-while" class="program-code" style="display: none;">
+            <h5> Program to print table for the given number using do while Loop</h5>
+                <pre><code>
+                  #include<stdio.h>  
+                    intmain(){   
+                    inti=1,number=0;   
+                    printf("Enter a number: ");   
+                    scanf("%d",&number);   
+                    do{  
+                    printf("%d \n",(number*i));   
+                    i++;   
+                    }while(i<=10);   
+                    return 0;   
+                    }   
+                </code></pre>
+                <div class="output">
+                  <h5>Output:</h5>
+                  <pre><code>
+                    Enter a number: 5
+                    5
+                    10
+                    15
+                    20
+                    25
+                    30
+                    35
+                    40
+                    45
+                    50
+                  </code></pre>
+                </div>
+          </div>
+
+
+
+        </div>
+        
+        
+        
+    </div>
+
+   
+      
+
+    <script src="code.js"></script>
+  </body>
+</html>
+
